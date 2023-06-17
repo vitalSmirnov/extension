@@ -19,3 +19,6 @@ C:\Users\smirn\source\repos\hedgehog-extension\obj\Debug\hedgehog-extension.late
 C:\Users\smirn\source\repos\hedgehog-extension\obj\Debug\extension.vsixmanifest
 C:\Users\smirn\source\repos\hedgehog-extension\obj\Debug\files.json
 C:\Users\smirn\source\repos\hedgehog-extension\obj\Debug\createTemplateManifests.cache
+C:\Users\smirn\source\repos\hedgehog-extension\obj\Debug\VSCT.read.1.tlog
+C:\Users\smirn\source\repos\hedgehog-extension\obj\Debug\VSCT.write.1.tlog
+C:\Users\smirn\source\repos\hedgehog-extension\obj\Debug\_EmptyResource.resources.original

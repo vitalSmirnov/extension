@@ -97,9 +97,11 @@ namespace hedgehog_extension
             string title = "FirstCommand";
             string codeText = Clipboard.GetText();
             string taskId = "someTask";
+            string programmingLanguage = "";
             var values = new Dictionary<string, string>
             {
-                {"code", codeText}  
+                {"code", codeText},
+                { "language", programmingLanguage}
             };
             var content = new StringContent(JsonConvert.SerializeObject(values), Encoding.UTF8, "application/json");
             var client = new HttpClient();

@@ -1,5 +1,7 @@
 ﻿using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 using System;
+using System.ComponentModel.Design;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Task = System.Threading.Tasks.Task;
@@ -26,11 +28,13 @@ namespace hedgehog_extension
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(hedgehog_extensionPackage.PackageGuidString)]
     [ProvideMenuResource("Menus.ctmenu", 1)]
+    [ProvideAutoLoad(UIContextGuids80.NoSolution)]
     public sealed class hedgehog_extensionPackage : AsyncPackage
     {
         /// <summary>
         /// hedgehog_extensionPackage GUID string.
         /// </summary>
+        ///     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
         public const string PackageGuidString = "370f54f7-9de4-4d32-98cb-c134ae95430c";
 
         #region Package Members
@@ -51,5 +55,7 @@ namespace hedgehog_extension
         }
 
         #endregion
+
     }
+
 }

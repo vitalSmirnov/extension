@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
+	<!-- Correct placement of Include statement -->
   <!--  This is the file that defines the actual layout and type of the commands.
         It is divided in different sections (e.g. command definition, command
         placement, ...), with each defining a specific set of properties.
@@ -15,10 +15,10 @@
         defining some of the constants that we will use inside the file. -->
 
   <!--This is the file that defines the IDs for all the commands exposed by VisualStudio. -->
-  <Extern href="stdidcmd.h"/>
+	<Extern href="stdidcmd.h"/>
 
-  <!--This header contains the command ids for the menus provided by the shell. -->
-  <Extern href="vsshlids.h"/>
+	<!--This header contains the command ids for the menus provided by the shell. -->
+	<Extern href="vsshlids.h"/>
 
   <!--The Commands section is where commands, menus, and menu groups are defined.
       This section uses a Guid to identify the package that provides the command defined inside it. -->
@@ -37,11 +37,12 @@
          must be a menu. -->
     <Groups>
       <Group guid="guidhedgehog_extensionPackageCmdSet" id="MyMenuGroup" priority="0x0600">
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_CODEWIN"/>
       </Group>
     </Groups>
 
-    <!--Buttons section. -->
+
+	  <!--Buttons section. -->
     <!--This section defines the elements the user can interact with, like a menu command or a button
         or combo box in a toolbar. -->
     <Buttons>
@@ -52,11 +53,11 @@
               <CommandFlag>DefaultInvisible</CommandFlag>
               <CommandFlag>DynamicVisibility</CommandFlag>
           If you do not want an image next to your command, remove the Icon node /> -->
-      <Button guid="guidhedgehog_extensionPackageCmdSet" id="FirstCommandId" priority="0x0100" type="Button">
+      <Button guid="guidhedgehog_extensionPackageCmdSet" id="cmdidMyCommand" priority="0x0100" type="Button">
         <Parent guid="guidhedgehog_extensionPackageCmdSet" id="MyMenuGroup" />
         <Icon guid="guidImages" id="bmpPic1" />
         <Strings>
-          <ButtonText>Say Hello World</ButtonText>
+          <ButtonText>Отправить решение на проверку</ButtonText>
         </Strings>
       </Button>
     </Buttons>
@@ -75,11 +76,11 @@
   <Symbols>
     <!-- This is the package guid. -->
     <GuidSymbol name="guidhedgehog_extensionPackage" value="{370f54f7-9de4-4d32-98cb-c134ae95430c}" />
-
     <!-- This is the guid used to group the menu commands together -->
     <GuidSymbol name="guidhedgehog_extensionPackageCmdSet" value="{bf2bf3de-e8a6-46ee-900b-3b37f04d817e}">
       <IDSymbol name="MyMenuGroup" value="0x1020" />
-      <IDSymbol name="FirstCommandId" value="0x0100" />
+      <IDSymbol name="FirstCommandId" value="0x0103" />
+	  <IDSymbol name="cmdidMyCommand" value="0x0100" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{a43054d7-db6c-4664-92da-27b171ced63a}" >
